@@ -18,8 +18,9 @@ public class MainPresenter implements MainContract.presenter {
 
     /**
      * 通过构造函数注入参数
-     * @param view
-     * @param bundle
+     *
+     * @param view   该参数必须能通过module提供
+     * @param bundle 该参数必须能通过module提供
      */
     @Inject
     public MainPresenter(MainContract.View view, Bundle bundle) {
