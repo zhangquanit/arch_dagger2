@@ -16,6 +16,11 @@ public class MainPresenter implements MainContract.presenter {
         mView = view;
     }
 
+    /**
+     * 通过构造函数注入参数
+     * @param view
+     * @param bundle
+     */
     @Inject
     public MainPresenter(MainContract.View view, Bundle bundle) {
         mView = view;
@@ -28,8 +33,8 @@ public class MainPresenter implements MainContract.presenter {
     }
 
     /**
-     * @Inject用来方法上
-     * @param onClickListener
+     * @Inject 用在方法上，当创建好MainPresenter后，会从module种拿到OnClickListener注入进来
+     * @param onClickListener  该参数必须能通过module提供
      */
     @Inject
     public  void  setOnClickListener(View.OnClickListener onClickListener){
